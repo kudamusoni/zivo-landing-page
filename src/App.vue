@@ -551,8 +551,8 @@
 </template>
 
 <script>
-const dashboardBaseUrl = (import.meta.env.VITE_DASHBOARD_BASE_URL || 'http://app.chatbot-api.local:5173').replace(/\/$/, '')
-const testProductUrl = import.meta.env.VITE_TEST_PRODUCT_URL || 'http://127.0.0.1:5175/'
+const dashboardBaseUrl = (import.meta.env.VITE_DASHBOARD_BASE_URL || 'https://dashboard.zivo.one').replace(/\/$/, '')
+const testProductUrl = import.meta.env.VITE_TEST_PRODUCT_URL || 'https://test.zivo.one/'
 
 export default {
   name: 'App',
