@@ -10,7 +10,7 @@
           <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-white">Z</div>
           <div>
             <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-950">Zivo</p>
-            <p class="hidden text-xs text-slate-500 sm:block">Valuation and review infrastructure</p>
+            <p class="hidden text-xs text-slate-500 sm:block">AI enquiry qualification for valuation-led businesses</p>
           </div>
         </div>
         <div class="hidden items-center gap-8 text-sm text-slate-600 md:flex">
@@ -37,24 +37,24 @@
     </header>
 
     <main class="relative z-10">
-      <section class="shell section pb-16 pt-12 sm:pb-20 sm:pt-16 lg:pt-24">
-        <div class="grid gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_35rem] lg:items-center lg:gap-14">
+      <section class="shell section pb-12 pt-10 sm:pb-16 sm:pt-14 lg:pb-18 lg:pt-18">
+        <div class="grid gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_35rem] lg:items-start lg:gap-14">
           <div class="max-w-2xl">
             <p class="text-sm font-medium uppercase tracking-[0.26em] text-stone-500" data-reveal style="--reveal-delay: 80ms;">
-              Reduce manual review and customer chasing
+              AI enquiry qualification for valuation-led businesses
             </p>
             <h1 class="font-serif mt-6 max-w-3xl text-balance text-[2.7rem] font-medium tracking-tight text-slate-950 sm:mt-8 sm:text-6xl lg:text-[4.6rem] lg:leading-[0.96]" data-reveal style="--reveal-delay: 160ms;">
-              Help your team review valuation enquiries faster.
+              Stop wasting hours chasing incomplete valuation enquiries.
             </h1>
             <p class="mt-5 max-w-xl text-base leading-7 text-slate-600 sm:mt-6 sm:text-xl sm:leading-8" data-reveal style="--reveal-delay: 240ms;">
-              Zivo collects better information up front, suggests likely matches and helps your team focus on the enquiries that actually need attention.
+              Customers rarely provide everything your team needs. Zivo asks the right questions, identifies products, captures missing details and delivers every enquiry ready for review.
             </p>
             <div class="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4" data-reveal style="--reveal-delay: 320ms;">
               <a
                 :href="testProductUrl"
                 class="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-800"
               >
-                Test the product
+                Launch demo
               </a>
               <a
                 href="#pricing"
@@ -66,53 +66,59 @@
 
           </div>
 
-          <div class="relative mx-auto w-full max-w-[34rem] lg:max-w-none" data-reveal style="--reveal-delay: 220ms;">
+          <div class="relative mx-auto w-full max-w-[32rem] lg:max-w-none" data-reveal style="--reveal-delay: 220ms;">
             <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white via-accent-50 to-stone-100 blur-2xl"></div>
             <div class="relative rounded-[1.7rem] border border-stone-300/80 bg-white/92 p-3 shadow-soft backdrop-blur-sm sm:rounded-[2rem] sm:p-5">
               <div class="overflow-hidden rounded-[1.7rem] border border-stone-200 bg-[#f6f8fb] shadow-panel">
-                <div class="flex items-center justify-between bg-[#8fd06d] px-4 py-3.5 text-white">
-                  <div>
-                    <p class="text-sm font-semibold leading-none">Demo Assistant</p>
-                    <p class="mt-1 text-xs text-white/80">Powered by Test Company</p>
-                  </div>
-                  <div class="flex items-center gap-3 text-white/85">
-                    <span class="h-2.5 w-2.5 rounded-full bg-white/70"></span>
-                    <span class="text-sm">↻</span>
-                    <span class="text-sm">×</span>
-                  </div>
-                </div>
+                <div class="grid gap-3 px-4 py-4 sm:px-5 sm:py-5">
+                  <div class="rounded-[1.05rem] border border-stone-200 bg-white px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.05)]" data-reveal style="--reveal-delay: 520ms;">
+                    <div class="flex items-center justify-between gap-3">
+                      <div>
+                        <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-stone-500">Customer conversation</p>
+                        <p class="mt-1 text-sm font-medium text-slate-900">The assistant collects the missing detail before a human needs to step in.</p>
+                      </div>
+                      <span class="rounded-full bg-stone-100 px-2.5 py-1 text-[11px] font-semibold text-slate-600">Live</span>
+                    </div>
 
-                <div class="space-y-3 px-4 py-4 sm:px-5">
-                  <div
-                    v-for="message in chatMessages"
-                    :key="message.text"
-                    class="w-fit rounded-[1.1rem] border px-4 py-2.5 text-sm leading-5"
-                    data-reveal
-                    :style="{ '--reveal-delay': `${message.delay}ms` }"
-                    :class="message.role === 'assistant'
-                      ? 'max-w-[15.5rem] sm:max-w-[22rem] border-stone-200 bg-white text-slate-800 shadow-[0_8px_20px_rgba(15,23,42,0.05)]'
-                      : 'max-w-[13rem] sm:max-w-[18rem] ml-auto border-[#81c95f] bg-[#8fd06d] text-white shadow-[0_10px_24px_rgba(15,23,42,0.08)]'"
-                  >
-                    {{ message.text }}
-                  </div>
-
-                  <div class="rounded-[1.05rem] border border-slate-300/30 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.98)_0%,rgba(248,250,252,0.96)_42%,rgba(241,245,249,0.94)_100%)] p-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)]" data-reveal style="--reveal-delay: 760ms;">
-                    <div class="rounded-[0.95rem] border border-stone-200 bg-white px-3 py-3 shadow-[0_6px_16px_rgba(15,23,42,0.04)]">
+                    <div class="mt-4 rounded-[0.95rem] border border-stone-200 bg-stone-50 px-3 py-3">
                       <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-stone-500">{{ heroSummary.question }}</p>
                       <p class="mt-1 text-sm font-medium text-slate-900">{{ heroSummary.answer }}</p>
                     </div>
 
-                    <div class="mt-3 rounded-[0.95rem] border border-[#8fd06d]/35 bg-white px-4 py-4 shadow-[0_8px_20px_rgba(15,23,42,0.05)]">
-                      <div class="flex items-center justify-between gap-3">
-                        <p class="text-xs font-bold uppercase tracking-[0.14em] text-stone-500">Estimated range</p>
-                        <span class="rounded-full bg-amber-50 px-2.5 py-1 text-[11px] font-semibold text-amber-700">Moderate confidence</span>
+                    <div class="mt-4 space-y-2">
+                      <div
+                        v-for="message in chatMessages"
+                        :key="message.text"
+                        class="w-fit rounded-[1rem] border px-3.5 py-2 text-sm leading-5"
+                        :class="message.role === 'assistant'
+                          ? 'max-w-[16rem] border-stone-200 bg-stone-50 text-slate-800'
+                          : 'max-w-[14rem] ml-auto border-[#81c95f] bg-[#8fd06d] text-white'"
+                      >
+                        {{ message.text }}
                       </div>
-                      <p class="mt-3 font-serif text-3xl font-medium tracking-tight text-slate-950">£1,600 – £2,400</p>
-                      <p class="mt-2 text-xs leading-5 text-slate-500">Based on similar catalog and market signals.</p>
+                    </div>
+                  </div>
+
+                  <div class="rounded-[1.05rem] border border-[#8fd06d]/35 bg-white px-4 py-4 shadow-[0_10px_24px_rgba(15,23,42,0.05)]" data-reveal style="--reveal-delay: 680ms;">
+                    <div class="flex items-center justify-between gap-3">
+                      <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.14em] text-stone-500">Qualified valuation case</p>
+                        <p class="mt-1 text-sm font-medium text-slate-900">Everything your team needs is already attached to the case.</p>
+                      </div>
+                      <span class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-rose-200 bg-white px-2 py-1 text-[11px] font-semibold text-rose-700 shadow-sm">
+                        <span class="h-1.5 w-1.5 rounded-full bg-rose-500"></span>
+                        Needs review
+                      </span>
+                    </div>
+                    <p class="mt-4 text-sm font-semibold text-slate-950">Seamaster soccer timer</p>
+                    <p class="mt-1 text-xs leading-5 text-slate-500">Customer uploaded photos, shared the likely model and provided an estimated era.</p>
+                    <div class="mt-4 rounded-[0.95rem] border border-stone-200 bg-stone-50 px-3 py-3">
+                      <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-stone-500">Estimated range</p>
+                      <p class="mt-2 font-serif text-3xl font-medium tracking-tight text-slate-950">£1,600 – £2,400</p>
+                      <p class="mt-1 text-xs leading-5 text-slate-500">Based on similar catalog and market signals.</p>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -120,18 +126,52 @@
       </section>
 
       <section class="shell pb-12 sm:pb-16">
-        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="grid gap-4 lg:grid-cols-3">
           <article
-            v-for="(item, index) in featureHighlights"
+            v-for="(item, index) in outcomeGroups"
             :key="item.title"
-            class="rounded-[1.25rem] border border-stone-300/80 bg-white/80 p-5 shadow-[0_10px_24px_rgba(15,23,42,0.05)]"
+            class="rounded-[1.35rem] border border-stone-300/80 bg-white/80 p-6 shadow-[0_10px_24px_rgba(15,23,42,0.05)]"
             data-reveal
             :style="{ '--reveal-delay': `${120 + (index * 80)}ms` }"
           >
-            <p class="text-xs font-bold uppercase tracking-[0.14em] text-stone-500">{{ item.kicker }}</p>
-            <h3 class="mt-3 text-lg font-semibold tracking-tight text-slate-950">{{ item.title }}</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-600">{{ item.copy }}</p>
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-stone-500">{{ item.kicker }}</p>
+            <h3 class="mt-3 text-2xl font-semibold tracking-tight text-slate-950">{{ item.title }}</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-600">{{ item.copy }}</p>
+            <ul class="mt-5 space-y-2 text-sm text-slate-700">
+              <li v-for="feature in item.features" :key="feature" class="flex gap-2">
+                <span class="mt-[0.4rem] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-950"></span>
+                <span>{{ feature }}</span>
+              </li>
+            </ul>
           </article>
+        </div>
+      </section>
+
+      <section class="shell pb-8 sm:pb-12">
+        <div class="rounded-[1.6rem] border border-stone-300/80 bg-white/82 p-6 shadow-[0_10px_24px_rgba(15,23,42,0.05)] sm:p-8">
+          <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div class="max-w-md" data-reveal>
+              <p class="text-sm font-medium uppercase tracking-[0.24em] text-stone-500">Built for</p>
+              <h2 class="font-serif mt-5 text-3xl font-medium tracking-tight text-slate-950 sm:text-4xl">
+                Businesses where enquiries need qualification before a human can act.
+              </h2>
+              <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+                Zivo is built for valuation-led teams handling product questions, appraisal requests and enquiries that need proper context before someone replies.
+              </p>
+            </div>
+
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div
+                v-for="(audience, index) in audienceTypes"
+                :key="audience"
+                class="rounded-[1rem] border border-stone-200 bg-stone-50 px-4 py-4 text-sm font-medium text-slate-800"
+                data-reveal
+                :style="{ '--reveal-delay': `${120 + (index * 70)}ms` }"
+              >
+                {{ audience }}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -140,7 +180,7 @@
           <div class="max-w-md" data-reveal>
             <p class="text-sm font-medium uppercase tracking-[0.24em] text-stone-500">Why teams buy it</p>
             <h2 class="font-serif mt-6 text-4xl font-medium tracking-tight text-slate-950 sm:text-5xl">
-              Spend less time reviewing weak enquiries.
+              Stop wasting time on incomplete enquiries.
             </h2>
           </div>
 
@@ -158,19 +198,32 @@
           <div class="max-w-md" data-reveal>
             <p class="text-sm font-medium uppercase tracking-[0.24em] text-stone-500">How it works</p>
             <h2 class="font-serif mt-6 text-4xl font-medium tracking-tight text-slate-950 sm:text-5xl">
-              Connect your data, guide the customer and review what matters.
+              From first message to team review, the workflow stays structured.
             </h2>
             <p class="mt-5 text-lg leading-8 text-slate-600">
-              Customers answer better, your team reviews faster and the right cases are easier to prioritise.
+              Zivo qualifies the enquiry, organises the details and gives your team the context they need before they respond.
             </p>
           </div>
 
-          <div class="grid gap-6 sm:gap-8 md:grid-cols-3">
-            <article v-for="(step, index) in flowSteps" :key="step.number" class="border-t border-stone-300 pt-5" data-reveal :style="{ '--reveal-delay': `${index * 110}ms` }">
-              <p class="text-sm font-medium text-stone-500">{{ step.number }}</p>
-              <h3 class="mt-4 text-xl font-semibold tracking-tight text-slate-950">{{ step.title }}</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">{{ step.copy }}</p>
-            </article>
+          <div class="rounded-[1.5rem] border border-stone-300/80 bg-white/85 p-5 shadow-[0_10px_24px_rgba(15,23,42,0.05)] sm:p-6">
+            <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              <article
+                v-for="(step, index) in flowSteps"
+                :key="step.title"
+                class="rounded-[1rem] border border-stone-200 bg-stone-50 px-4 py-4"
+                data-reveal
+                :style="{ '--reveal-delay': `${index * 110}ms` }"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-slate-900 px-2 text-[10px] font-bold text-white">
+                    {{ index + 1 }}
+                  </span>
+                  <p class="text-[11px] font-bold uppercase tracking-[0.12em] text-stone-500">{{ step.kicker }}</p>
+                </div>
+                <h3 class="mt-3 text-base font-semibold tracking-tight text-slate-950">{{ step.title }}</h3>
+                <p class="mt-2 text-sm leading-6 text-slate-500">{{ step.copy }}</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -181,10 +234,10 @@
             <div class="max-w-3xl" data-reveal>
               <p class="text-sm font-medium uppercase tracking-[0.24em] text-stone-500">Dashboard</p>
               <h2 class="font-serif mt-6 max-w-2xl text-4xl font-medium tracking-tight text-slate-950 sm:text-5xl">
-                Review leads, estimates and product matches in one place.
+                Everything your team needs, in one place.
               </h2>
               <p class="mt-5 max-w-xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-                Your team can quickly see what came in, what needs attention and where to act next.
+                Every conversation, lead, valuation and product match is organised automatically so nothing gets lost.
               </p>
             </div>
 
@@ -446,7 +499,7 @@
       <section class="shell section py-12 sm:py-16">
         <div class="mx-auto max-w-4xl text-center">
           <p class="font-serif text-3xl font-medium tracking-tight text-slate-950 sm:text-5xl" data-reveal>
-            Turn your existing data into faster, more grounded valuation enquiries.
+            Never chase missing information again.
           </p>
         </div>
       </section>
@@ -456,10 +509,10 @@
           <div class="max-w-md" data-reveal>
             <p class="text-sm font-medium uppercase tracking-[0.24em] text-stone-500">Pricing</p>
             <h2 class="font-serif mt-6 text-4xl font-medium tracking-tight text-slate-950 sm:text-5xl">
-              Start small, then scale the workflow.
+              Choose the plan that fits your workflow.
             </h2>
             <p class="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              Use the test product first, then choose the setup that fits your volume, team size and review process.
+              Price around the qualification workflow, not just the chatbot. Start with the demo, then move to the setup that fits your volume and review process.
             </p>
           </div>
 
@@ -484,6 +537,15 @@
             </article>
           </div>
         </div>
+        <div class="mt-8 rounded-[1.4rem] border border-stone-300/80 bg-white/90 p-6 shadow-[0_10px_24px_rgba(15,23,42,0.05)]" data-reveal>
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-stone-500">Every plan includes</p>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div v-for="item in planInclusions" :key="item" class="flex gap-2 text-sm text-slate-700">
+              <span class="mt-[0.4rem] h-1.5 w-1.5 shrink-0 rounded-full bg-slate-950"></span>
+              <span>{{ item }}</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="faq" class="shell section py-16 sm:py-20">
@@ -491,7 +553,7 @@
           <div class="max-w-md" data-reveal>
             <p class="text-sm font-medium uppercase tracking-[0.24em] text-stone-500">Common questions</p>
             <h2 class="font-serif mt-6 text-4xl font-medium tracking-tight text-slate-950 sm:text-5xl">
-              How Zivo works.
+              Objections your team will ask.
             </h2>
           </div>
 
@@ -511,25 +573,25 @@
             <div class="max-w-2xl" data-reveal>
               <p class="text-sm font-medium uppercase tracking-[0.24em] text-white/55">Next step</p>
               <h2 class="font-serif mt-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
-                Choose the path that helps you evaluate it fastest.
+                Experience a valuation from your customer&apos;s perspective.
               </h2>
               <p class="mt-5 max-w-xl text-base leading-7 text-white/72 sm:text-lg">
-                Review the pricing or jump straight into the product test flow and see how Zivo handles your workflow.
+                Walk through the workflow, see how valuation enquiries are qualified and decide whether the process fits your team before you commit.
               </p>
             </div>
 
             <div class="flex flex-col gap-3 sm:flex-row sm:gap-4 lg:flex-col" data-reveal style="--reveal-delay: 140ms;">
               <a
+                :href="testProductUrl"
+                class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:-translate-y-0.5"
+              >
+                Launch demo
+              </a>
+              <a
                 href="#pricing"
                 class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:-translate-y-0.5"
               >
                 View pricing
-              </a>
-              <a
-                :href="testProductUrl"
-                class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-white/15"
-              >
-                Test the product
               </a>
             </div>
           </div>
@@ -541,9 +603,9 @@
       <div class="flex flex-col gap-4 border-t border-stone-300/80 py-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         <p class="max-w-md">© 2026 Zivo. Configurable valuation and review workflows powered by client data.</p>
         <div class="flex flex-wrap items-center gap-4 sm:gap-6">
-          <a href="#value" class="transition hover:text-slate-950">Value</a>
+          <a href="#workflow" class="transition hover:text-slate-950">How it works</a>
           <a href="#product" class="transition hover:text-slate-950">Product</a>
-          <a href="#final-cta" class="transition hover:text-slate-950">Demo</a>
+          <a href="#pricing" class="transition hover:text-slate-950">Pricing</a>
         </div>
       </div>
     </footer>
@@ -560,9 +622,8 @@ export default {
     return {
       revealObserver: null,
       navItems: [
-        { label: 'Value', href: '#value' },
-        { label: 'Workflow', href: '#workflow' },
         { label: 'Product', href: '#product' },
+        { label: 'How it works', href: '#workflow' },
         { label: 'Pricing', href: '#pricing' },
         { label: 'FAQ', href: '#faq' },
       ],
@@ -585,61 +646,114 @@ export default {
         question: 'How old is it? Optional. An approximate year or era is fine.',
         answer: '1980s',
       },
-      featureHighlights: [
+      heroWorkflowSteps: [
         {
-          kicker: 'Less chasing',
-          title: 'Collect better details earlier',
-          copy: 'Ask for the right information up front so your team spends less time going back and forth with customers.',
+          kicker: 'Customer',
+          title: 'Enquiry starts',
+          copy: 'A visitor asks about an item, valuation or product.',
         },
         {
-          kicker: 'Faster triage',
-          title: 'Spot the enquiries worth reviewing',
-          copy: 'Use matches, pricing signals and urgency states to separate stronger enquiries from weaker ones quickly.',
+          kicker: 'AI',
+          title: 'Questions asked',
+          copy: 'Zivo gathers the missing details before your team gets involved.',
         },
         {
-          kicker: 'Grounded estimates',
-          title: 'Support staff with pricing context',
-          copy: 'Give your team a stronger starting point before they review a case or reply to the customer.',
+          kicker: 'Lead',
+          title: 'Case created',
+          copy: 'The enquiry becomes structured instead of staying as a loose chat.',
         },
         {
-          kicker: 'Fits your workflow',
-          title: 'Run the process your team already uses',
-          copy: 'Control prompts, panels, actions and routing so the chatbot supports your existing review process.',
+          kicker: 'Dashboard',
+          title: 'Team reviews',
+          copy: 'Your team gets the case with the right context already attached.',
+        },
+        {
+          kicker: 'Outcome',
+          title: 'Customer contacted',
+          copy: 'Your team can respond with much less back and forth.',
+        },
+      ],
+      audienceTypes: [
+        'Auction houses',
+        'Antique dealers',
+        'Luxury resale teams',
+        'Jewellery buyers',
+        'Art specialists',
+        'Collectibles businesses',
+      ],
+      outcomeGroups: [
+        {
+          kicker: 'Qualify',
+          title: 'Collect complete information before a human ever gets involved.',
+          copy: 'Use the assistant to remove the repetitive first step from your team.',
+          features: ['AI conversations', 'Dynamic questioning', 'Image identification'],
+        },
+        {
+          kicker: 'Organise',
+          title: 'Every enquiry becomes structured.',
+          copy: 'Keep the conversation, product context and lead details attached to the same case.',
+          features: ['Lead management', 'Conversation history', 'Product matching'],
+        },
+        {
+          kicker: 'Accelerate',
+          title: 'Spend your team’s time where it matters.',
+          copy: 'Push the highest-value enquiries to the top and support the team with better context.',
+          features: ['Dashboard', 'Valuations', 'Human review', 'Notifications'],
         },
       ],
       valuePoints: [
         {
-          title: 'Make answers more consistent',
-          copy: 'Give customers a clearer first response without relying on whoever happens to pick up the enquiry.',
+          title: 'Stop chasing customers for missing information.',
+          copy: 'Collect the model, era, photos and intent during the first conversation instead of in a string of follow-up emails.',
         },
         {
-          title: 'Save team time',
-          copy: 'Collect the key details early so your team spends less time chasing missing information.',
+          title: 'Know which enquiries deserve your team’s attention.',
+          copy: 'Separate stronger valuation or product enquiries from weaker ones so the queue is easier to prioritise.',
         },
         {
-          title: 'Improve lead quality',
-          copy: 'Turn casual valuation chats into more qualified enquiries with stronger context attached.',
+          title: 'Give your team confidence before they respond.',
+          copy: 'Provide product matches, structured details and pricing context before a member of staff steps in.',
         },
         {
-          title: 'Keep a human in the loop',
-          copy: 'Your team still decides when pricing should be reviewed and when a specialist should step in.',
+          title: 'Fit into the workflow you already have.',
+          copy: 'Keep human review where it matters and let Zivo handle the repetitive qualification steps around it.',
         },
       ],
       flowSteps: [
         {
-          number: '01',
-          title: 'Connect your business',
-          copy: 'Set up your catalog, business details, prompts and workflow rules in one place.',
+          kicker: 'Customer',
+          title: 'Enquiry starts',
+          copy: 'A visitor asks about an item or requests a valuation.',
         },
         {
-          number: '02',
-          title: 'Guide the customer',
-          copy: 'Handle valuation requests, product questions, image matching and lead capture through the chatbot.',
+          kicker: 'AI',
+          title: 'Questions asked',
+          copy: 'Zivo collects the missing details based on the enquiry.',
         },
         {
-          number: '03',
-          title: 'Review and respond',
-          copy: 'Your team sees urgent cases, checks the estimate and follows up with the customer.',
+          kicker: 'Images',
+          title: 'Photos checked',
+          copy: 'Uploaded photos help identify likely products and improve the case.',
+        },
+        {
+          kicker: 'Product',
+          title: 'Match suggested',
+          copy: 'References and product context are narrowed down automatically.',
+        },
+        {
+          kicker: 'Lead',
+          title: 'Case created',
+          copy: 'The conversation becomes a structured case instead of a loose thread.',
+        },
+        {
+          kicker: 'Valuation',
+          title: 'Pricing prepared',
+          copy: 'Zivo builds pricing context when the workflow supports it.',
+        },
+        {
+          kicker: 'Review',
+          title: 'Team acts',
+          copy: 'Your dashboard shows what is urgent and what needs a reply.',
         },
       ],
       dashboardNav: [
@@ -741,54 +855,67 @@ export default {
       ],
       dashboardPoints: [
         {
-          title: 'Lead review',
-          copy: 'Open each enquiry with the full conversation and see which leads need a reply first.',
+          title: 'Stop searching across emails and spreadsheets',
+          copy: 'Leads, valuations and appointments are already organised into the queues your team actually works from.',
         },
         {
-          title: 'Product suggestions',
-          copy: 'Check image-based matches, compare alternatives and confirm the closest product before saving.',
+          title: 'Every conversation becomes a tracked case',
+          copy: 'Conversation history, uploaded images and captured details stay attached to the same enquiry from start to finish.',
         },
         {
-          title: 'Estimate review',
-          copy: 'See the pricing signals behind each estimate before your team sends the final response.',
+          title: 'Review with confidence before contacting customers',
+          copy: 'See matches, pricing context and valuation support before your team replies to the customer.',
         },
       ],
       faqs: [
         {
-          question: 'What does Zivo use to generate responses?',
-          answer: 'Zivo uses the business details, catalog data and workflow settings you configure instead of relying on generic answers alone.',
+          question: 'Will this replace my valuation team?',
+          answer: 'No. Zivo gathers information and provides context so your experts spend less time on repetitive work and more time making informed decisions.',
         },
         {
-          question: 'Can my team control what the assistant says?',
-          answer: 'Yes. Your team controls tone, workflow rules, escalation conditions and response boundaries.',
+          question: 'Can customers upload photos?',
+          answer: 'Yes. Zivo can analyse uploaded images to help identify likely products and guide the conversation.',
         },
         {
-          question: 'Where does human review fit in?',
-          answer: 'Routine cases can move faster, while unclear or higher-stakes valuations can still be reviewed by your team before they go further.',
+          question: 'Can I use my own product data?',
+          answer: 'Yes. Upload your catalogue and historical sales so valuations are based on your own information.',
+        },
+        {
+          question: 'What if AI is not confident?',
+          answer: 'Zivo does not hide uncertainty. Low-confidence results are shown clearly and can be escalated for manual review.',
         },
       ],
       pricingPlans: [
         {
-          kicker: 'Test first',
+          kicker: 'Starter',
           name: 'Starter',
           price: 'From £99/mo',
-          copy: 'A lightweight setup for early teams validating the workflow.',
-          features: ['Chatbot widget', 'Core valuation flow', 'Basic queue visibility'],
+          copy: 'Perfect for testing AI qualification with real valuation enquiries.',
+          features: ['Lean qualification workflow', 'Dashboard access', 'Lead capture', 'Image identification'],
         },
         {
-          kicker: 'Most common',
+          kicker: 'Growth',
           name: 'Growth',
           price: 'From £249/mo',
-          copy: 'For businesses using Zivo to qualify and route valuation enquiries day to day.',
-          features: ['Image matching', 'Grounded estimates', 'Team dashboard and triage'],
+          copy: 'For teams handling valuation requests every day.',
+          features: ['Higher daily volume', 'Stronger routing', 'Review support', 'Operational dashboard'],
         },
         {
-          kicker: 'Custom',
+          kicker: 'Enterprise',
           name: 'Enterprise',
           price: 'Custom',
-          copy: 'For higher-volume teams needing tailored onboarding, controls and support.',
-          features: ['Custom workflow design', 'Advanced permissions', 'Priority support'],
+          copy: 'For complex workflows, higher volume and tailored rollout support.',
+          features: ['Custom workflow design', 'Advanced controls', 'Dedicated onboarding', 'Priority support'],
         },
+      ],
+      planInclusions: [
+        'AI conversations',
+        'Product identification',
+        'Structured lead capture',
+        'Dashboard',
+        'Human review',
+        'Conversation history',
+        'Email notifications',
       ],
     }
   },
